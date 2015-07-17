@@ -30,6 +30,8 @@ http://cordova.apache.org
 @property (nonatomic, copy) NSString *pathToFirstDynamicallyGeneratedDictionary;
 
 
+- (void)initialize;
+
 - (void)startListening:(CDVInvokedUrlCommand*)command;
 - (void)stopListening:(CDVInvokedUrlCommand*)command;
 - (void)suspendRecognition:(CDVInvokedUrlCommand*)command;

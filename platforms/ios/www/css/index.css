@@ -15,16 +15,29 @@ body {
     );
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size: 16px;
+    font-size: 12px;
     height:100%;
     margin:0px;
-    padding:40px;
+    padding:40px 20px;
     width:100%;
 }
 
+.left {
+    width: 40%;
+    float: left;
+}
+
+.right {
+    width: 58%;
+    float: right;
+}
+
 button {
-    padding: 20px;
-    border: 1px solid #ccc;
+    font-size: 12px;
+    display: block;
+    width: 100%;
+    padding: 6px 20px;
+    border: 1px solid #666;
     border-radius: 4px;
     background: #ddd;
 }

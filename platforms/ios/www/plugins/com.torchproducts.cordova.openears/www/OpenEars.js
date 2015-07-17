@@ -7,14 +7,14 @@ http://cordova.apache.org
 
 */
 
-cordova.define("com.torchproducts.cordova.openears.OpenEars", function(require, exports, module) { (function() {
+(function() {
 	var OpenEars, cordova, exec;
 
 	cordova = require("cordova");
 	exec = require("cordova/exec");
 
 	OpenEars = (function() {
-		var genericHandleError, trigger;
+				var genericHandleError, trigger;
 
 		function OpenEars() {}
 
@@ -31,11 +31,9 @@ cordova.define("com.torchproducts.cordova.openears.OpenEars", function(require, 
 		OpenEars.prototype.initialize = function() {
 			var success;
 			success = function(args) {
-				console.log('got success', args);
 				return trigger("initialize", args);
 			};
-			console.log('returning the exec');
-			return exec(success, genericHandleError, "OpenEars", "startListening", []);
+			return exec(success, genericHandleError, "OpenEars", "initialize", []);
 		};
 
 		OpenEars.prototype.startListening = function() {
@@ -54,8 +52,6 @@ cordova.define("com.torchproducts.cordova.openears.OpenEars", function(require, 
 			return exec(success, genericHandleError, "OpenEars", "stopListening", []);
 		};
 
-
-			
 
 
 		OpenEars.prototype.events = {
@@ -153,6 +149,5 @@ cordova.define("com.torchproducts.cordova.openears.OpenEars", function(require, 
 	module.exports = OpenEars;
 
 }).call(this);
-});
 
 });
