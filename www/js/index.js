@@ -1,7 +1,7 @@
-// function log(msg) {
-// 	var log = document.getElementById('log');
-// 	log.innerHTML = log.innerHTML + '<br />' + msg;
-// }
+function log(msg) {
+	var log = document.getElementById('log');
+	log.innerHTML = log.innerHTML + '<br />' + msg;
+}
 
 var app = {
 	initialize: function() {
@@ -11,18 +11,16 @@ var app = {
 		document.addEventListener('deviceready', this.onDeviceReady, false);
 	},
 	onDeviceReady: function() {
-		// log('Device Ready');
-
-		alert('device ready!');
+		log('Device Ready');
 		
 		//var openEars;
 		document.getElementById("oeButtonInitialize").addEventListener("click", function() {
-			alert('Open Ears: initialize');
+			log('Open Ears: initialize');
 			openEars = window.OpenEars.initialize();
 		});
 
 		document.getElementById("oeButtonStartListening").addEventListener("click", function() {
-			alert('Open Ears: startListening');
+			log('Open Ears: startListening');
 			openEars.startListening();
 		});
 	}
