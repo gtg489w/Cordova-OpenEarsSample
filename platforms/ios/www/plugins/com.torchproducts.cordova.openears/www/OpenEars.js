@@ -54,12 +54,93 @@ cordova.define("com.torchproducts.cordova.openears.OpenEars", function(require, 
 			return exec(success, genericHandleError, "OpenEars", "stopListening", []);
 		};
 
+
+			
+
+
 		OpenEars.prototype.events = {
-			startedListening: function() {
-				return trigger("startedListening");
+			audioSessionInterruptionDidBegin: function() {
+				return trigger("audioSessionInterruptionDidBegin");
 			},
-			stoppedListening: function() {
-				return trigger("stoppedListening");
+			audioSessionInterruptionDidEnd: function() {
+				return trigger("audioSessionInterruptionDidEnd");
+			},
+			audioInputDidBecomeUnavailable: function() {
+				return trigger("audioInputDidBecomeUnavailable");
+			},
+			audioInputDidBecomeAvailable: function() {
+				return trigger("audioInputDidBecomeAvailable");
+			},
+			audioRouteDidChangeToRoute: function(newRoute) {
+				return trigger("audioRouteDidChangeToRoute", {
+					newRoute: newRoute
+				});
+			},
+			pocketsphinxRecognitionLoopDidStart: function() {
+				return trigger("pocketsphinxRecognitionLoopDidStart");
+			},
+			pocketsphinxDidStartListening: function() {
+				return trigger("pocketsphinxDidStartListening");
+			},
+			pocketsphinxDidDetectSpeech: function() {
+				return trigger("pocketsphinxDidDetectSpeech");
+			},
+			pocketsphinxDidDetectFinishedSpeech: function() {
+				return trigger("pocketsphinxDidDetectFinishedSpeech");
+			},
+			pocketsphinxDidReceiveHypothesis: function(hypothesis, recognitionScore, utteranceID) {
+				return trigger("pocketsphinxDidReceiveHypothesis", {
+					hypothesis: hypothesis,
+					recognitionScore: recognitionScore,
+					utteranceID: utteranceID
+				});
+			},
+			pocketsphinxDidReceiveNBestHypothesisArray: function(hypothesisArray) {
+				return trigger("pocketsphinxDidReceiveNBestHypothesisArray", {
+					hypothesisArray: hypothesisArray
+				});
+			},
+			pocketsphinxDidStopListening: function() {
+				return trigger("pocketsphinxDidStopListening");
+			},
+			pocketsphinxDidSuspendRecognition: function() {
+				return trigger("pocketsphinxDidSuspendRecognition");
+			},
+			pocketsphinxDidResumeRecognition: function() {
+				return trigger("pocketsphinxDidResumeRecognition");
+			},
+			pocketsphinxDidChangeLanguageModelToFile: function(newLanguageModelPathAsString, newDictionaryPathAsString) {
+				return trigger("pocketsphinxDidChangeLanguageModelToFile", {
+					newLanguageModelPathAsString: newLanguageModelPathAsString,
+					newDictionaryPathAsString: newDictionaryPathAsString
+				});
+			},
+			pocketSphinxContinuousSetupDidFailWithReason: function(reasonForFailure) {
+				return trigger("pocketSphinxContinuousSetupDidFailWithReason", {
+					reasonForFailure: reasonForFailure
+				});
+			},
+			pocketSphinxContinuousTeardownDidFailWithReason: function(reasonForFailure) {
+				return trigger("pocketSphinxContinuousTeardownDidFailWithReason", {
+					reasonForFailure: reasonForFailure
+				});
+			},
+			pocketsphinxTestRecognitionCompleted: function() {
+				return trigger("pocketsphinxTestRecognitionCompleted");
+			},
+			pocketsphinxFailedNoMicPermissions: function() {
+				return trigger("pocketsphinxFailedNoMicPermissions");
+			},
+			micPermissionCheckCompleted: function(result) {
+				return trigger("micPermissionCheckCompleted", {
+					result: result
+				});
+			},
+			fliteDidStartSpeaking: function() {
+				return trigger("fliteDidStartSpeaking");
+			},
+			fliteDidFinishSpeaking: function() {
+				return trigger("fliteDidFinishSpeaking");
 			}
 		};
 
