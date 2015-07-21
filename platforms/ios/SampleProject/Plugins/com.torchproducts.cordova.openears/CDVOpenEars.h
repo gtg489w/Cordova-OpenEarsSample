@@ -27,8 +27,6 @@ http://cordova.apache.org
 @property (nonatomic, strong) OEPocketsphinxController *pocketsphinxController;
 @property (nonatomic, strong) OEFliteController *fliteController;
 
-@property (nonatomic, copy) NSString *pathToFirstDynamicallyGeneratedLanguageModel;
-@property (nonatomic, copy) NSString *pathToFirstDynamicallyGeneratedDictionary;
 
 
 - (void)initialize:(CDVInvokedUrlCommand*)command;

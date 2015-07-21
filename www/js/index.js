@@ -68,8 +68,7 @@ var app = {
 
 		document.getElementById("oeButtonChangeDictionary").addEventListener("click", function() {
 			log('changing dictionary');
-			Ears.generateLanguageModel(languages["directions"].name, languages["directions"].csv);
-			openEars.generateLanguageModel('Test', 'HELLO,GOODBYE');
+			openEars.changeLanguageModel('HelloGoodbye', 'HELLO,GOODBYE');
 		});
 
 		document.getElementById("oeButtonStartListening").addEventListener("click", function() {
@@ -79,7 +78,7 @@ var app = {
 
 		document.getElementById("oeButtonSay").addEventListener("click", function() {
 			log('Saying hello');
-			openEars.say();
+			openEars.say('HellLow My good friend');
 		});
 	}
 };

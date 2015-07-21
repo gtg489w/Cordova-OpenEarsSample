@@ -39,13 +39,13 @@
 		7E7966E61810823500FA85AD /* icon-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DC1810823500FA85AD /* icon-small.png */; };
 		7E7966E71810823500FA85AD /* icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DD1810823500FA85AD /* icon-small@2x.png */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
-		3F052E9BB8A04E4FB32D5225 /* CDVOpenEars.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8318361A4F4AF7B2B91A4D /* CDVOpenEars.m */; };
-		E6636CF1F6904DE1AC88E154 /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EAC5C16316B748D986F2AC4E /* AcousticModelEnglish.bundle */; };
-		04EBEB011534486287AFEB52 /* AcousticModelSpanish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F2FD42A9272F414AB4ACDCC5 /* AcousticModelSpanish.bundle */; };
-		1E2F06209C784847BE5FAE7C /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A7C348D93754BEE91F9A768 /* OpenEars.framework */; };
-		334EA02ADC5E4340B57F4350 /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB80DF7D934C4CA49E4E46B6 /* Slt.framework */; };
-		37557633B4BB47EDA66B35CE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFBF6F7C6BB34703AFD7FC55 /* AVFoundation.framework */; };
-		BC2CAA822D4C4F6C9CCB8389 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C03E586F2E644098FACE0DB /* AudioToolbox.framework */; };
+		BEB9C1CBE84E45228FE406AC /* CDVOpenEars.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FF6A3370C8E4CF6A8931EE4 /* CDVOpenEars.m */; };
+		87040F618CBD441D9A2B606C /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0D1EBDA5336E434ABEEFD523 /* AcousticModelEnglish.bundle */; };
+		E8305560BA9D4ACF8219A97F /* AcousticModelSpanish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 905749F71A3B44C4B622C4B9 /* AcousticModelSpanish.bundle */; };
+		BB8C56D8CA824017906A4C82 /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 536124DB102A4D2281274F92 /* OpenEars.framework */; };
+		F913A67F42624AA4B0C9E777 /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F99BCDABC94D5E96FF676E /* Slt.framework */; };
+		187CC00ABACD46A1BD75A539 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC9720D1D2E4A97B4D59DBB /* AVFoundation.framework */; };
+		8042695B2B574D4483CAFBAE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379539B5394746B6B8BA5CDC /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,14 +111,14 @@
 		EB87FDF31871DA8E0020F90C /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../www; sourceTree = "<group>"; };
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "SampleProject/config.xml"; sourceTree = "<group>"; };
-		EC8318361A4F4AF7B2B91A4D /* CDVOpenEars.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVOpenEars.m"; path = "com.torchproducts.cordova.openears/CDVOpenEars.m"; sourceTree = "<group>"; fileEncoding = 4; };
-		EAC5C16316B748D986F2AC4E /* AcousticModelEnglish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = "AcousticModelEnglish.bundle"; path = "SampleProject/Plugins/com.torchproducts.cordova.openears/AcousticModelEnglish.bundle"; sourceTree = "<group>"; };
-		F2FD42A9272F414AB4ACDCC5 /* AcousticModelSpanish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = "AcousticModelSpanish.bundle"; path = "SampleProject/Plugins/com.torchproducts.cordova.openears/AcousticModelSpanish.bundle"; sourceTree = "<group>"; };
-		3C11D0DBF96B4D52B8703417 /* CDVOpenEars.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVOpenEars.h"; path = "com.torchproducts.cordova.openears/CDVOpenEars.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		5A7C348D93754BEE91F9A768 /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "OpenEars.framework"; path = "SampleProject/Plugins/com.torchproducts.cordova.openears/OpenEars.framework"; sourceTree = "<group>"; };
-		FB80DF7D934C4CA49E4E46B6 /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Slt.framework"; path = "SampleProject/Plugins/com.torchproducts.cordova.openears/Slt.framework"; sourceTree = "<group>"; };
-		BFBF6F7C6BB34703AFD7FC55 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AVFoundation.framework"; path = "System/Library/Frameworks/AVFoundation.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
-		6C03E586F2E644098FACE0DB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		0FF6A3370C8E4CF6A8931EE4 /* CDVOpenEars.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVOpenEars.m"; path = "com.torchproducts.cordova.openears/CDVOpenEars.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		0D1EBDA5336E434ABEEFD523 /* AcousticModelEnglish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = "AcousticModelEnglish.bundle"; path = "SampleProject/Plugins/com.torchproducts.cordova.openears/AcousticModelEnglish.bundle"; sourceTree = "<group>"; };
+		905749F71A3B44C4B622C4B9 /* AcousticModelSpanish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = "AcousticModelSpanish.bundle"; path = "SampleProject/Plugins/com.torchproducts.cordova.openears/AcousticModelSpanish.bundle"; sourceTree = "<group>"; };
+		2D6AA4A18B6E496984D4D072 /* CDVOpenEars.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVOpenEars.h"; path = "com.torchproducts.cordova.openears/CDVOpenEars.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		536124DB102A4D2281274F92 /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "OpenEars.framework"; path = "SampleProject/Plugins/com.torchproducts.cordova.openears/OpenEars.framework"; sourceTree = "<group>"; };
+		59F99BCDABC94D5E96FF676E /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Slt.framework"; path = "SampleProject/Plugins/com.torchproducts.cordova.openears/Slt.framework"; sourceTree = "<group>"; };
+		6AC9720D1D2E4A97B4D59DBB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AVFoundation.framework"; path = "System/Library/Frameworks/AVFoundation.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		379539B5394746B6B8BA5CDC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,12 +130,12 @@
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
-				E6636CF1F6904DE1AC88E154 /* AcousticModelEnglish.bundle in Resources */,
-				04EBEB011534486287AFEB52 /* AcousticModelSpanish.bundle in Resources */,
-				1E2F06209C784847BE5FAE7C /* OpenEars.framework in Frameworks */,
-				334EA02ADC5E4340B57F4350 /* Slt.framework in Frameworks */,
-				37557633B4BB47EDA66B35CE /* AVFoundation.framework in Frameworks */,
-				BC2CAA822D4C4F6C9CCB8389 /* AudioToolbox.framework in Frameworks */,
+				87040F618CBD441D9A2B606C /* AcousticModelEnglish.bundle in Resources */,
+				E8305560BA9D4ACF8219A97F /* AcousticModelSpanish.bundle in Resources */,
+				BB8C56D8CA824017906A4C82 /* OpenEars.framework in Frameworks */,
+				F913A67F42624AA4B0C9E777 /* Slt.framework in Frameworks */,
+				187CC00ABACD46A1BD75A539 /* AVFoundation.framework in Frameworks */,
+				8042695B2B574D4483CAFBAE /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,12 +208,12 @@
 				5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 				305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */,
-				EAC5C16316B748D986F2AC4E /* AcousticModelEnglish.bundle */,
-				F2FD42A9272F414AB4ACDCC5 /* AcousticModelSpanish.bundle */,
-				5A7C348D93754BEE91F9A768 /* OpenEars.framework */,
-				FB80DF7D934C4CA49E4E46B6 /* Slt.framework */,
-				BFBF6F7C6BB34703AFD7FC55 /* AVFoundation.framework */,
-				6C03E586F2E644098FACE0DB /* AudioToolbox.framework */,
+				0D1EBDA5336E434ABEEFD523 /* AcousticModelEnglish.bundle */,
+				905749F71A3B44C4B622C4B9 /* AcousticModelSpanish.bundle */,
+				536124DB102A4D2281274F92 /* OpenEars.framework */,
+				59F99BCDABC94D5E96FF676E /* Slt.framework */,
+				6AC9720D1D2E4A97B4D59DBB /* AVFoundation.framework */,
+				379539B5394746B6B8BA5CDC /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -229,8 +229,8 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				EC8318361A4F4AF7B2B91A4D /* CDVOpenEars.m */,
-				3C11D0DBF96B4D52B8703417 /* CDVOpenEars.h */,
+				0FF6A3370C8E4CF6A8931EE4 /* CDVOpenEars.m */,
+				2D6AA4A18B6E496984D4D072 /* CDVOpenEars.h */,
 			);
 			name = Plugins;
 			path = "SampleProject/Plugins";
@@ -415,7 +415,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
-				3F052E9BB8A04E4FB32D5225 /* CDVOpenEars.m in Sources */,
+				BEB9C1CBE84E45228FE406AC /* CDVOpenEars.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +487,44 @@
 					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
 					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
 					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
 				);
 			};
 			name = Debug;
@@ -524,6 +562,44 @@
 				);
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
+					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
 					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
 					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
 					"\"SampleProject/Plugins/com.torchproducts.cordova.openears\"",
