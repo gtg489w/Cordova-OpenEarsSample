@@ -23,13 +23,21 @@ body {
 }
 
 .left {
-    width: 40%;
-    float: left;
+    position: absolute;
+    left: 0px;
+    right: 50%;
+    top: 0px;
+    padding: 30px 20px;
+    
 }
 
 .right {
-    width: 58%;
-    float: right;
+    position: absolute;
+    left: 50%;
+    right: 0px;
+    top: 0px;
+    padding: 30px 8px;
+    overflow-y: scroll;
 }
 
 button {

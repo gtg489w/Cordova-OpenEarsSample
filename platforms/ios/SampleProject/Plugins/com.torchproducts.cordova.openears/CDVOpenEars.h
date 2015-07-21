@@ -36,7 +36,7 @@ http://cordova.apache.org
 - (void)stopListening:(CDVInvokedUrlCommand*)command;
 - (void)suspendRecognition:(CDVInvokedUrlCommand*)command;
 - (void)resumeRecognition:(CDVInvokedUrlCommand*)command;
-- (void)changeLanguageModelToFile:(CDVInvokedUrlCommand*)command;
+- (void)changeLanguageModel:(CDVInvokedUrlCommand*)command;
 - (void)say:(CDVInvokedUrlCommand*)command;
 
 

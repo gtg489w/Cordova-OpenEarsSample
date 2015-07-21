@@ -12,38 +12,7 @@
     [self.openEarsEventsObserver setDelegate:self]; // Make this class the delegate of OpenEarsObserver so we can get all of the messages about what OpenEars is doing.
     
     [[OEPocketsphinxController sharedInstance] setActive:TRUE error:nil]; // Call this before setting any OEPocketsphinxController characteristics
-    
-    // This is the language model we're going to start up with. The only reason I'm making it a class property is that I reuse it a bunch of times in this example,
-    // but you can pass the string contents directly to OEPocketsphinxController:startListeningWithLanguageModelAtPath:dictionaryAtPath:languageModelIsJSGF:
-    
-    NSArray *firstLanguageArray = @[@"BACKWARD",
-                                    @"CHANGE",
-                                    @"FORWARD",
-                                    @"GO",
-                                    @"LEFT",
-                                    @"MODEL",
-                                    @"RIGHT",
-                                    @"TURN"];
-    
-    OELanguageModelGenerator *languageModelGenerator = [[OELanguageModelGenerator alloc] init];
-    
-    // languageModelGenerator.verboseLanguageModelGenerator = TRUE; // Uncomment me for verbose language model generator debug output.
-    
-    NSError *error = [languageModelGenerator generateLanguageModelFromArray:firstLanguageArray withFilesNamed:@"FirstOpenEarsDynamicLanguageModel" forAcousticModelAtPath:[OEAcousticModel pathToModel:@"AcousticModelEnglish"]];
-    
-    if(error) {
-        NSLog(@"Dynamic language generator reported error %@", [error description]);
-    }   else {
-        
-        NSLog(@"\n\nApp initialized!!!!!!!!");
-        
-        // This is how to start the continuous listening loop of an available instance of OEPocketsphinxController. We won't do this if the language generation failed since it will be listening for a command to change over to the generated language.
-        [[OEPocketsphinxController sharedInstance] setActive:TRUE error:nil]; // Call this once before setting properties of the OEPocketsphinxController instance.
-    }
-
 }
-
-
 
 -(void)startListening:(CDVInvokedUrlCommand*)command{
     NSLog(@"Called start listening");
@@ -91,12 +60,29 @@
     [[OEPocketsphinxController sharedInstance] resumeRecognition];
 }
 
-- (void)changeLanguageModelToFile:(CDVInvokedUrlCommand*)command{
+- (void)changeLanguageModel:(CDVInvokedUrlCommand*)command{
     NSLog(@"Called change language model to file");
+
+    // NSString *languageName = [command.arguments objectAtIndex:0];
+    // NSString *languageCSV = [command.arguments objectAtIndex:1];
+    // NSArray *languageArray = [languageCSV componentsSeparatedByString:@","];
+
+
+    NSArray *languageArray = @[@"Test"];
+    error = [languageModelGenerator generateLanguageModelFromArray:languageArray withFilesNamed:@"TestLanguageModel" forAcousticModelAtPath:[OEAcousticModel pathToModel:@"AcousticModelEnglish"]]; 
+
+    if(error) {
+        NSLog(@"Dynamic language generator reported error %@", [error description]);    
+    }   else {
+        self.pathToSecondDynamicallyGeneratedLanguageModel = [languageModelGenerator pathToSuccessfullyGeneratedLanguageModelWithRequestedName:@"TestLanguageModel"]; // We'll set our new .languagemodel file to be the one to get switched to when the words "CHANGE MODEL" are recognized.
+        self.pathToSecondDynamicallyGeneratedDictionary = [languageModelGenerator pathToSuccessfullyGeneratedDictionaryWithRequestedName:@"TestLanguageModel"];; // We'll set our new dictionary to be the one to get switched to when the words "CHANGE MODEL" are recognized.
+        [[OEPocketsphinxController sharedInstance] changeLanguageModelToFile:self.pathToSecondDynamicallyGeneratedLanguageModel withDictionary:self.pathToSecondDynamicallyGeneratedDictionary]; 
+    }
 }
 
 - (void)say:(CDVInvokedUrlCommand*)command{
     NSLog(@"Called say");
+    [self.fliteController say:[NSString stringWithFormat:@"Oh hello there"] withVoice:self.slt];
 }
 
 
@@ -211,7 +197,7 @@
     } else {
         NSLog(@"Pocketsphinx completed mic check 1, 2, mic check 1, 2 with a result of false");
     }
-    NSString* jsString = [[NSString alloc] initWithFormat:@"OpenEars.events.micPermissionCheckCompleted(%@,%@);",result];
+    NSString* jsString = [[NSString alloc] initWithFormat:@"OpenEars.events.micPermissionCheckCompleted(%@);",result?@"True":@"False"];
     [self.commandDelegate evalJs:jsString];
 }
 
