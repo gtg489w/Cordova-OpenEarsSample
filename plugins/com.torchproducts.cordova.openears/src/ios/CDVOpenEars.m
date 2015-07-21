@@ -6,8 +6,8 @@
     NSLog(@"OpenEars initialize called");
     self.fliteController = [[OEFliteController alloc] init];
     self.fliteController.userCanInterruptSpeech = TRUE;
-    self.fliteController.target_stddev = 1.5;
-    self.fliteController.duration_stretch = .8;
+    self.fliteController.target_stddev = 1.2;
+    self.fliteController.duration_stretch = .9;
     
     self.openEarsEventsObserver = [[OEEventsObserver alloc] init];
     self.openEarsEventsObserver.delegate = self;

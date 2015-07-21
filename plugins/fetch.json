@@ -9,8 +9,9 @@
     },
     "com.torchproducts.cordova.openears": {
         "source": {
-            "type": "local",
-            "path": "../Cordova-OpenEars"
+            "type": "git",
+            "url": "https://github.com/gtg489w/Cordova-OpenEars",
+            "subdir": "."
         },
         "is_top_level": true,
         "variables": {}
