@@ -21,6 +21,7 @@ http://cordova.apache.org
 
 
 @property (nonatomic, strong) Slt *slt;
+@property (nonatomic, strong) OELanguageModelGenerator *languageModelGenerator;
 
 @property (nonatomic, strong) OEEventsObserver *openEarsEventsObserver;
 @property (nonatomic, strong) OEPocketsphinxController *pocketsphinxController;

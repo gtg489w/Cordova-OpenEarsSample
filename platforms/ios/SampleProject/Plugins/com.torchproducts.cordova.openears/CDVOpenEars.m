@@ -2,6 +2,13 @@
 
 @implementation CDVOpenEars
 
+-(OELanguageModelGenerator *) languageModelGenerater {
+    if (_languageModelGenerator == nil){
+        OELanguageModelGenerator *_languageModelGenerator = [[OELanguageModelGenerator alloc] init]; 
+    }
+    return _languageModelGenerator;
+}
+
 -(void)initialize:(CDVInvokedUrlCommand*)command{
     NSLog(@"OpenEars initialize called");
     self.fliteController = [[OEFliteController alloc] init];
@@ -25,15 +32,15 @@
                                     @"MODEL",
                                     @"RIGHT",
                                     @"TURN"];
-    OELanguageModelGenerator *languageModelGenerator = [[OELanguageModelGenerator alloc] init]; 
+//    OELanguageModelGenerator *languageModelGenerator = [[OELanguageModelGenerator alloc] init]; 
 
-    NSError *error = [languageModelGenerator generateLanguageModelFromArray:firstLanguageArray withFilesNamed:@"FirstOpenEarsDynamicLanguageModel" forAcousticModelAtPath:[OEAcousticModel pathToModel:@"AcousticModelEnglish"]]; // Change "AcousticModelEnglish" to "AcousticModelSpanish" in order to create a language model for Spanish recognition instead of English.
+    NSError *error = [_languageModelGenerator generateLanguageModelFromArray:firstLanguageArray withFilesNamed:@"FirstOpenEarsDynamicLanguageModel" forAcousticModelAtPath:[OEAcousticModel pathToModel:@"AcousticModelEnglish"]]; // Change "AcousticModelEnglish" to "AcousticModelSpanish" in order to create a language model for Spanish recognition instead of English.
     
     if(error) {
         NSLog(@"Dynamic language generator reported error %@", [error description]);    
     } else {
-        self.pathToFirstDynamicallyGeneratedLanguageModel = [languageModelGenerator pathToSuccessfullyGeneratedLanguageModelWithRequestedName:@"FirstOpenEarsDynamicLanguageModel"];
-        self.pathToFirstDynamicallyGeneratedDictionary = [languageModelGenerator pathToSuccessfullyGeneratedDictionaryWithRequestedName:@"FirstOpenEarsDynamicLanguageModel"];
+        self.pathToFirstDynamicallyGeneratedLanguageModel = [_languageModelGenerator pathToSuccessfullyGeneratedLanguageModelWithRequestedName:@"FirstOpenEarsDynamicLanguageModel"];
+        self.pathToFirstDynamicallyGeneratedDictionary = [_languageModelGenerator pathToSuccessfullyGeneratedDictionaryWithRequestedName:@"FirstOpenEarsDynamicLanguageModel"];
     }
     
     if(![OEPocketsphinxController sharedInstance].isListening) {
@@ -69,14 +76,14 @@
 
 
     NSArray *languageArray = @[@"Test"];
-    error = [languageModelGenerator generateLanguageModelFromArray:languageArray withFilesNamed:@"TestLanguageModel" forAcousticModelAtPath:[OEAcousticModel pathToModel:@"AcousticModelEnglish"]]; 
+    NSError *error = [_languageModelGenerator generateLanguageModelFromArray:languageArray withFilesNamed:@"TestLanguageModel" forAcousticModelAtPath:[OEAcousticModel pathToModel:@"AcousticModelEnglish"]]; 
 
     if(error) {
         NSLog(@"Dynamic language generator reported error %@", [error description]);    
     }   else {
-        self.pathToSecondDynamicallyGeneratedLanguageModel = [languageModelGenerator pathToSuccessfullyGeneratedLanguageModelWithRequestedName:@"TestLanguageModel"]; // We'll set our new .languagemodel file to be the one to get switched to when the words "CHANGE MODEL" are recognized.
-        self.pathToSecondDynamicallyGeneratedDictionary = [languageModelGenerator pathToSuccessfullyGeneratedDictionaryWithRequestedName:@"TestLanguageModel"];; // We'll set our new dictionary to be the one to get switched to when the words "CHANGE MODEL" are recognized.
-        [[OEPocketsphinxController sharedInstance] changeLanguageModelToFile:self.pathToSecondDynamicallyGeneratedLanguageModel withDictionary:self.pathToSecondDynamicallyGeneratedDictionary]; 
+        NSString *newModel = [_languageModelGenerator pathToSuccessfullyGeneratedLanguageModelWithRequestedName:@"TestLanguageModel"];
+        NSString *newDictionary = [_languageModelGenerator pathToSuccessfullyGeneratedDictionaryWithRequestedName:@"TestLanguageModel"];
+        [[OEPocketsphinxController sharedInstance] changeLanguageModelToFile:newModel withDictionary:newDictionary];
     }
 }
 

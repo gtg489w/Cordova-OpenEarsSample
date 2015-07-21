@@ -66,6 +66,12 @@ var app = {
 			openEars.initialize();
 		});
 
+		document.getElementById("oeButtonChangeDictionary").addEventListener("click", function() {
+			log('changing dictionary');
+			Ears.generateLanguageModel(languages["directions"].name, languages["directions"].csv);
+			openEars.generateLanguageModel('Test', 'HELLO,GOODBYE');
+		});
+
 		document.getElementById("oeButtonStartListening").addEventListener("click", function() {
 			log('Start listening');
 			openEars.startListening();
